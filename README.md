@@ -32,7 +32,7 @@ This is the first pre-release version of the `fullstackmastery .NET WebAPI Boile
 - dotnet ef database update -Context IdentityContext
 - dotnet run (OR) Run the Solution using Visual Studio 2019
 
-Say [Hi on Twitter!](https://www.linkedin.com/in/mxolisi-nkosi-b47b57117/)
+Say [Hi on LinkedIn!](https://www.linkedin.com/in/mxolisi-nkosi-b47b57117/)
 
 ### How to use SQL Server or PostgreSQL as your Data Provider
 The Project currently uses MSSQL as the default Data Provider. If you are more comfortable with MySQL or PostgreSQL, here is how to migrate to them easily.
