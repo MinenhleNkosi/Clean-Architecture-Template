@@ -26,13 +26,17 @@ namespace Infrastructure.Shared.Services
         {
             try
             {
-                // create message
-                var email = new MimeMessage();
-                email.Sender = new MailboxAddress(_mailSettings.DisplayName, request.From ?? _mailSettings.EmailFrom);
+                //create message
+                var email = new MimeMessage
+                {
+                    Sender = new MailboxAddress(_mailSettings.DisplayName, request.From ?? _mailSettings.EmailFrom)
+                };
                 email.To.Add(MailboxAddress.Parse(request.To));
                 email.Subject = request.Subject;
-                var builder = new BodyBuilder();
-                builder.HtmlBody = request.Body;
+                var builder = new BodyBuilder
+                {
+                    HtmlBody = request.Body
+                };
                 email.Body = builder.ToMessageBody();
                 using var smtp = new SmtpClient();
                 smtp.Connect(_mailSettings.SmtpHost, _mailSettings.SmtpPort, SecureSocketOptions.StartTls);
