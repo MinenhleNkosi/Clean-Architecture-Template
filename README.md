@@ -153,7 +153,7 @@ Please share this Repository within your developer community, if you think that 
 
 ## About the Author
 ### Minenhle Nkosi
-- Linkedin - [Mukesh Murugan](https://www.linkedin.com/in/mxolisi-nkosi-b47b57117/)
+- Linkedin - [Minenhle Nkosi](https://www.linkedin.com/in/mxolisi-nkosi-b47b57117/)
 
 ## Licensing
 This Project is licensed with the [MIT License](https://github.com/MinenhleNkosi/Clean-Architecture-Template/blob/main/LICENSE).
