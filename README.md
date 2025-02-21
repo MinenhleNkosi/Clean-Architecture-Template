@@ -30,7 +30,7 @@ This is the first pre-release version of the `fullstackmastery .NET WebAPI Boile
 - dotnet restore
 - dotnet ef database update -Context ApplicationDbContext
 - dotnet ef database update -Context IdentityContext
-- dotnet run (OR) Run the Solution using Visual Studio 2019
+- dotnet run (OR) Run the Solution using Visual Studio 2022
 
 Say [Hi on LinkedIn!](https://www.linkedin.com/in/mxolisi-nkosi-b47b57117/)
 
@@ -50,7 +50,7 @@ The Project currently uses MSSQL as the default Data Provider. If you are more c
 
 3. Add NuGet packages to both projects (Infrastructure.Identity and Infrastructure.Persistence):
 #### For MySql:
-run `dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.2` (remember to do this on both projects)
+run `dotnet add package Pomelo.EntityFrameworkCore.MySql` (remember to do this on both projects)
 #### For PostgreSQL:
 run 
 ```cli
@@ -68,8 +68,6 @@ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL.Design
 6. cd to `{YourProjectName}.Infrastructure.Persistence` and run
    - `dotnet ef database update --startup-project ../{YourProjectName}.WebApi/{YourProjectName}.WebApi.csproj -c "ApplicationDbContext"`
    - `dotnet ef migrations add Initial --startup-project ../{YourProjectName}.WebApi/{YourProjectName}.WebApi.csproj -c "ApplicationDbContext"`
-   
-The above guide (To use MySQL) was contributed by [geekz-reno](https://github.com/geekz-reno).
 
 ### Default Roles & Credentials 🔐
 As soon you build and run your application, default users and roles get added to the database.
@@ -90,17 +88,16 @@ You can use these default credentials to generate valid JWTokens at the ../api/a
 
 Does it really make sense to Setup your ASP.NET Core Solution everytime you start a new WebApi Project ? Aren't we wasting quite a lot of time in doing this over and over gain?
 
-This is the exact Problem that I intend to solve with this Full-Fledged ASP.NET Core 3.1 WebApi Solution Template, that also follows various principles of Clean Architecture.
+This is the exact Problem that I intend to solve with this Full-Fledged ASP.NET Core 9.0 WebApi Solution Template, that also follows various principles of Clean Architecture.
 
-The primary goal is to create a Full-Fledged implementation, that is well documented along with the steps taken to build this Solution from Scratch. This Solution Template will also be available within Visual Studio 2019 (by installing the required Nuget Package / Extension).
-- Demonstrate Clean Monolith Architecture in ASP.NET Core 3.1 
+The primary goal is to create a Full-Fledged implementation, that is well documented along with the steps taken to build this Solution from Scratch. This Solution Template will also be available within Visual Studio 2022 (by installing the required Nuget Package / Extension).
+- Demonstrate Clean Monolith Architecture in ASP.NET Core 9.0 
 - This is not a Proof of Concept
 - Implementation that is ready for Production
 - Integrate the most essential libraries and packages
 
 ## Give a Star ⭐️
 If you found this Implementation helpful or used it in your Projects, do give it a star. Thanks!
-Or, If you are feeling really generous, [Support the Project with a small contribution!](https://www.buymeacoffee.com/codewithmukesh)
 
 ## Technologies 👩🏿‍💻💻🧑🏿‍💻
 - ASP.NET Core 9.0 WebApi
@@ -134,8 +131,8 @@ Or, If you are feeling really generous, [Support the Project with a small contri
 - [x] User Auditing
 
 ## Prerequisites
-- Visual Studio 2019 Community and above
-- .NET Core 8.0 SDK and above
+- Visual Studio 2022 Community and above
+- .NET Core 9.0 SDK and above
 - Basic Understanding of Architectures and Clean Code Principles
 - I Recommend that you read [Onion Architecture In ASP.NET Core With CQRS – Detailed](https://www.codewithmukesh.com/blog/onion-architecture-in-aspnet-core/) article to understand this implementation much better. This project is just an Advanced Version of the mentioned article.
 
